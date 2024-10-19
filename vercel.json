@@ -13,7 +13,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://yourproductionurl.com",
+        "APP_URL": "mysql://jobboard22_givenwolf:6e5edcb75934021443b2d8f7b8758d88d2b8f12d@g0i4j.h.filess.io:3307/jobboard22_givenwolf",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
