@@ -1,8 +1,7 @@
 {
     "version": 2,
-    "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": { "runtime": "vercel-php@0.3.1" }
     },
     "routes": [
         {
@@ -11,24 +10,22 @@
         }
     ],
     "env": {
+        "APP_NAME": "Laravel Vercel",
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "APP_URL": "mysql://jobboard22_givenwolf:6e5edcb75934021443b2d8f7b8758d88d2b8f12d@g0i4j.h.filess.io:3307/jobboard22_givenwolf",
-        "DB_HOST": "g0i4j.h.filess.io",
-        "DB_PORT": "3307",
-        "DB_CONNECTION": "ysql",
-        "DB_DATABASE": "jobboard22_givenwolf",
-        "DB_USERNAME": "jobboard22_givenwolf",
-        "DB_PASSWORD": "6e5edcb75934021443b2d8f7b8758d88d2b8f12d",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://laravel-vercel.vercel.app",
+
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
-
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        "SESSION_DRIVER": "cookie",
+        "VIEW_COMPILED_PATH": "/tmp/views",
+        "SSR_TEMP_PATH": "/tmp/ssr",
+        "NODE_PATH": "node"
     }
 }
