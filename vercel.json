@@ -14,7 +14,12 @@
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "mysql://jobboard22_givenwolf:6e5edcb75934021443b2d8f7b8758d88d2b8f12d@g0i4j.h.filess.io:3307/jobboard22_givenwolf",
-
+        "DB_HOST": "g0i4j.h.filess.io",
+        "DB_PORT": "3307",
+        "DB_CONNECTION": "ysql",
+        "DB_DATABASE": "jobboard22_givenwolf",
+        "DB_USERNAME": "jobboard22_givenwolf",
+        "DB_PASSWORD": "6e5edcb75934021443b2d8f7b8758d88d2b8f12d",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
