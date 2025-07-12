@@ -1,3 +1,4 @@
+
 # WorkBridge API
 
 **WorkBridge** is a Laravel-based Job Board Application API that connects **freelancers** with **employers**. It enables employers to post job opportunities and freelancers to apply for them with ease. The system supports full authentication, role-based access, and profile management.
@@ -52,20 +53,21 @@
 
 ## 📁 Project Structure
 
+```
 app/
 ├── Models/
-│ ├── User.php
-│ ├── Employer.php
-│ ├── Freelancer.php
-│ ├── Job.php
-│ └── JobApplication.php
+│   ├── User.php
+│   ├── Employer.php
+│   ├── Freelancer.php
+│   ├── Job.php
+│   └── JobApplication.php
 ├── Http/
-│ └── Controllers/
-│ ├── AuthController.php
-│ ├── JobController.php
-│ ├── EmployerController.php
-│ └── JobApplicationController.php
-
+│   └── Controllers/
+│       ├── AuthController.php
+│       ├── JobController.php
+│       ├── EmployerController.php
+│       └── JobApplicationController.php
+```
 
 ---
 
@@ -105,27 +107,33 @@ php artisan migrate
 
 # Start development server
 php artisan serve
+```
 
-🔐 API Authentication
+---
+
+## 🔐 API Authentication
+
 This API supports:
+- Email/Password login
+- Google OAuth login
+- Token-based authentication using Laravel Sanctum or Passport
 
-Email/Password login
+Make sure to include your token in the `Authorization` header as:
 
-Google OAuth login
-
-Token-based authentication using Laravel Sanctum or Passport
-
-Make sure to include your token in the Authorization header as:
-
+```
 Authorization: Bearer <your-token>
+```
 
-📌 Future Enhancements
-Admin dashboard
+---
 
-Job filtering and search
+## 📌 Future Enhancements
 
-Messaging between users
+- Admin dashboard
+- Job filtering and search
+- Messaging between users
+- Application status tracking
+- Notifications
 
-Application status tracking
+## 📄 License
 
-Notifications
+This project is licensed under the [MIT License](LICENSE).
