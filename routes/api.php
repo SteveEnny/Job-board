@@ -13,7 +13,7 @@ Route::get('/', function (Request $request) {
 });
 
 
-Route::get('jobs', function (Request $request) {
+Route::get('/jobs', function (Request $request) {
     return response()->json(['message' => 'Welcome to all Job']);
 });
 
