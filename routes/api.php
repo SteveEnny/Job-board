@@ -13,7 +13,9 @@ Route::get('/', function (Request $request) {
 });
 
 
-Route::get('jobs', [JobController::class, 'index']);
+Route::get('jobs', function (Request $request) {
+    return response()->json(['message' => 'Welcome to all Job']);
+});
 
 Route::prefix("v1")->group(function () {
 
