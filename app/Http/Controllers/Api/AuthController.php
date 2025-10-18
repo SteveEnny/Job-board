@@ -13,14 +13,13 @@ class AuthController extends Controller
     public function login(Request $request) {
         try {
 
-            $request->validate(
+            $validatedData =  $request->validate(
                 [
                     'email' => 'required | email',
                     'password' => 'required'
                     ]
                 );
-                
-                $validatedData = $request->only(['email', 'password']);
+                // $validatedData = $request->only(['email', 'password']);
                 return (new LoginAction())->execute($validatedData);
             }
          catch(\Exception $exception){

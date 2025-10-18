@@ -24,9 +24,9 @@ Route::prefix("v1")->group(function () {
     }
     );
 
+    Route::apiResource('jobs', JobController::class);
     Route::middleware('auth:sanctum')->group(function () {
-        Route::apiResource('jobs', JobController::class);
-        
+
         Route::apiResource('job.application', JobApplicationController::class)->only([ 'store']);
 
         Route::apiResource('my-job-application', MyJobApplicationsController::class);

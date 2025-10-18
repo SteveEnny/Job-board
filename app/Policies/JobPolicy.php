@@ -64,7 +64,7 @@ class JobPolicy
         return false;
     }
 
-    public function apply(?User $user, Job $job) {
+    public function apply(User $user, Job $job) {
         // return $job->where('id', $job->id)
         // ->whereHas('jobApplications', fn($query) => $query->where('user_id', '=' ,$user->id ?? $user))->exists();
         return !$job->hasUserApplied($user);

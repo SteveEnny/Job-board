@@ -23,12 +23,13 @@ class JobController extends Controller
     public function index(Request $request)
     {
         try{
-        
+
 
             $filters = $request->only('title', 'min_salary', 'max_salary', 'experience', 'category');
             // $job = Job::query()->filter();
-
-            return new JobCollection($this->loadRelation(Job::query())->filter($filters)->paginate(5));
+            $jobs = $this->loadRelation(Job::query())->filter($filters)->paginate(5);
+            $response = new JobCollection($jobs);
+            return $response;
             }
              catch (Exception $exception) {
             logger($exception);

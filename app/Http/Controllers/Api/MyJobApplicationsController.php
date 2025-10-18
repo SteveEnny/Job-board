@@ -14,8 +14,9 @@ class MyJobApplicationsController extends Controller
      */
     public function index()
     {
-        $job_applications = request()->user()->jobApplications()->with('job', 'job-employer')->latest()->get();
-        return $this->successResponse('Success', $job_applications);
+        $job_applications = request()->user()->jobApplications()->with('job', 'job.employer')->get();
+        // return ['type' => gettype()];
+        return $this->successResponse('Success', $job_applications->toArray());
     }
 
     /**
