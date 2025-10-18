@@ -8,9 +8,7 @@ use App\Http\Controllers\Api\MyJobApplicationsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function (Request $request) {
-    return response()->json(['message' => 'Welcome to the Job Portal API']);
-});
+Route::get('/', JobController::class);
 
 
 Route::apiResource('jobs', JobController::class);
